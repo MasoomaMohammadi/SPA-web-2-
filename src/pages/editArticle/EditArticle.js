@@ -12,7 +12,7 @@ function EditArticle() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/articles/${articleIds}`)
+      .get(`http://localhost:5000/articles/${articleIds}`)
       .then((response) => setEditArticleData(response.data));
   }, []);
 
