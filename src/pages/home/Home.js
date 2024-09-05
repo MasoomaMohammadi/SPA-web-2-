@@ -9,7 +9,7 @@ function Home() {
  const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/articles")
+    axios.get("http://localhost:5000/articles")
       .then((response) => setArticles(response.data));
   }, [])
   return (
