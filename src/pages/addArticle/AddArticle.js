@@ -22,7 +22,7 @@ function AddArticle() {
 
   const addArticleHandler = () => {
     axios
-      .post("http://localhost:3000/articles", addForm)
+      .post("http://localhost:5000/articles", addForm)
       .then((response) => {
         if (response.status === 201) {
           Swal.fire({

@@ -12,12 +12,12 @@ function EditArticle() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/articles/${articleIds}`)
+      .get(`http://localhost:5000/articles/${articleIds}`)
       .then((response) => setEditArticleData(response.data));
   }, []);
 
   const editArticleHandler = () => {
-    axios.put(`http://localhost:3000/articles/${articleIds}`, editArticleData);
+    axios.put(`http://localhost:5000/articles/${articleIds}`, editArticleData);
     Swal.fire({
       title: "مقاله با موفقیت ویرایش شد",
       timer: "2000",

@@ -16,7 +16,7 @@ function Article() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/articles/${articleIds}`)
+      .get(`http://localhost:5000/articles/${articleIds}`)
       .then((response) => setArticleData(response.data));
   }, []);
 
@@ -35,7 +35,7 @@ function Article() {
           title: "مقاله با موفقیت حذف شد",
           icon: "success",
         });
-        axios.delete(`http://localhost:3000/articles/${id}`);
+        axios.delete(`http://localhost:5000/articles/${id}`);
         navigate("/");
       }
     });
